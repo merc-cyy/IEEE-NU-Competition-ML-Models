@@ -20,7 +20,7 @@ origins = [
 # CORS setup for React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*'],  # or your frontend URL
+    allow_origins=['https://nuvolunteers.org/'],  # or your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
