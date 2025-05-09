@@ -30,6 +30,10 @@ app.add_middleware(
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 
+assert SUPABASE_URL is not None, "SUPABASE_URL is not set"
+assert SUPABASE_KEY is not None, "SUPABASE_KEY is not set"
+
+
 print(f"SUPABASE_URL: {SUPABASE_URL}")
 print(f"SUPABASE_KEY: {SUPABASE_KEY}")
 
@@ -45,6 +49,11 @@ jobs = {}
 class ExampleRequest(BaseModel):
     userid: str
 recommender = VolunteerRecommender(supabase)
+recommender.fetch_data()
+print("Before MODEL FIT")
+recommender.fit()
+print("MODEL FIT IS DONE")
+
 @app.post("/recommend/")
 def recommend(request: ExampleRequest):
     try:
@@ -55,10 +64,7 @@ def recommend(request: ExampleRequest):
         print(f"USERID:{user_id}")
         
         print("INIT IS DONE")
-        recommender.fetch_data()
-        print("Before MODEL FIT")
-        recommender.fit()
-        print("MODEL FIT IS DONE")
+        
         user_embedding = recommender.build_user_profile(user_id)
         print("USER RECOMMENDATIONS TAKEN INTO CONSIDERATION")
         recommendations = recommender.recommend_for_user(user_embedding, top_n=1000)
