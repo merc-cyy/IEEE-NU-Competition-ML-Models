@@ -12,7 +12,7 @@ load_dotenv()
 
 # declare origin/s
 origins = [
-    "https://nuvolunteers.org/",
+    "https://nuvolunteers.org",
     "localhost:3000"
 ]
 
