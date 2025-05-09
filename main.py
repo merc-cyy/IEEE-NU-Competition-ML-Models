@@ -20,7 +20,7 @@ origins = [
 # CORS setup for React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['https://nuvolunteers.org/'],  # or your frontend URL
+    allow_origins=['https://nuvolunteers.org'],  # or your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,6 +29,11 @@ app.add_middleware(
 # Supabase init
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+
+print(f"SUPABASE_URL: {SUPABASE_URL}")
+print(f"SUPABASE_KEY: {SUPABASE_KEY}")
+
+
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 #jobs
