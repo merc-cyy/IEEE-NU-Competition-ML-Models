@@ -54,6 +54,11 @@ print("Before MODEL FIT")
 recommender.fit()
 print("MODEL FIT IS DONE")
 
+@app.get("/")
+def read_root():
+    return {"status": "ok"}
+
+
 @app.post("/recommend/")
 def recommend(request: ExampleRequest):
     try:
