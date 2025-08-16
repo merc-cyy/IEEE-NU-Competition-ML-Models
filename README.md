@@ -32,10 +32,9 @@ I built two models of NLP - KeyBERT and TF-IDF and which we incorporated in the 
 
 #### KeyBERT
 - Words from the volunteer posting are encoded to tokens and mean-pooling is applied to produce a dense vector embedding.
-- This vector is a semantic representation of the volunteer posting.
-
-### KeyBERT encoding
 - Using KeyBERT frameworks, candidate keywords are generated and hte document embedding and candidate keywords are compared via _cosine similarity_ to get the words that are the most representative of the text.
+
+### Matching
 - User profile is also encoded similarly into an embedding.
 - The top K volunteeer opportunities that match this profile are returned.
 
