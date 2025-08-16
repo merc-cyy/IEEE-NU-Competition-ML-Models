@@ -18,10 +18,10 @@ Our winning project was an application focused on recommending volunteer opportu
   
 
 ## How it works
-I built two models of NLP - KeyBERT and TF-IDF and which we incorporated in the application.
+Built two models of NLP - KeyBERT and TF-IDF and which we incorporated in the application.
 
 ### Data fetching
-- I used Python, due to its object-oriented properties, for Object Relational Mapping.
+- Utilised Python, due to its object-oriented properties, for Object Relational Mapping.
 - Created a Supabase client that used SQL queries and Pandas data frames to fetch data from the PostgreSQL database
 
 ### Data preprocessing
