@@ -5,7 +5,6 @@ My team, Engage, won the annual ,renown and invite-only, Institute of Electrical
 
 Our winning project was an application focused on recommending volunteer opportunities to students in our local Evanston area using ML tools and Natural Language Processing (NLP) algorithms to parse volunteer opportunities and match them to student profiles.
 
-
 ## Languages/Tools/Frameworks
 - Python
 - Supabase
@@ -48,6 +47,13 @@ recommender.fetch_data()
 
 ### Fit embeddings on opportunities
 recommender.fit()
+
+## Authors
+- Mercy Muiruri
+- Naomi Li
+- Breanna Lu
+- Bingyue Zhang
+
 
 ### Build a user profile embedding
 user_embedding = recommender.build_user_profile(user_id=123)
