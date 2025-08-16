@@ -7,8 +7,11 @@ Our winning project was an application focused on recommending volunteer opportu
 
 
 ## Languages/Tools/Frameworks
-- KeyBERT
 - Python
+- Supabase
+- PostgreSQL
+- KeyBERT
+- TF-IDF (natural language processing)
 - Pandas
 - scikitlearn
 - numpy
@@ -23,9 +26,11 @@ I built two models of NLP - KeyBERT and TF-IDF and which we incorporated in the 
 - Created a Supabase client that used SQL queries and Pandas data frames to fetch data from the PostgreSQL database
 
 ### Data preprocessing
-- Developed ETL pipelines for batch processing of data to normalize the data for our API requests.
+#### TF-IDF
+- Vectorized the words from the volunteer posting using TfidfVectorizer from scikit-learn to build a 'vocabulary' for the model.
+- Computed the weight of the words using the TFIDF count
 
-### Model initialization 
+#### KeyBERT
 - Words from the volunteer posting are encoded to tokens and mean-pooling is applied to produce a dense vector embedding.
 - This vector is a semantic representation of the volunteer posting.
 
