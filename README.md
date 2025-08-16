@@ -2,7 +2,8 @@
 ## NU-Volunteers --> Natural Language Processing Tool built for our app's database
 
 My team, Engage, won the annual ,renown and invite-only, Institute of Electrical and Electronic Engineers competition held this year, 2025 at Northwestern in Chicago. 
-Our winning project was an application focused on recommending volunteer opportunities to students in our local Evanston area using ML tools and Natural Language Processing (NLP) algorithms like similarity search to parse volunteer opportunities and match them to student profiles.
+
+Our winning project was an application focused on recommending volunteer opportunities to students in our local Evanston area using ML tools and Natural Language Processing (NLP) algorithms to parse volunteer opportunities and match them to student profiles.
 
 
 ## Languages/Tools/Frameworks
